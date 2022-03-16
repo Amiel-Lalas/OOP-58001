@@ -1,0 +1,82 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Untitled1.ipynb",
+      "provenance": [],
+      "authorship_tag": "ABX9TyN7J+Y9JHKvOj6zNYFyShDI",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Amiel-Lalas/OOP-58001/blob/main/Class%20with%20Multiple%20Objects%20Application\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### Class with Multiple Objects Application"
+      ],
+      "metadata": {
+        "id": "NdCIyNq1h1At"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import random\n",
+        "class Person:\n",
+        "  def __init__ (self, student, pre, mid, fin):\n",
+        "    self.student = student\n",
+        "    self.pre = pre *0.30\n",
+        "    self.mid = mid *0.30\n",
+        "    self.fin = fin *0.40\n",
+        "\n",
+        "  def Grade (self):\n",
+        "    print (self.student, \"has an average grade of\", self.pre, \"in prelims\")\n",
+        "    print (self.student, \"has an average grade of\", self.mid, \"in midterms\")\n",
+        "    print (self.student, \"has an average grade of\", self.fin, \"in finals\")\n",
+        "\n",
+        "stud1 = Person (\"Luciel\", random.randint(75,99), random.randint(75,99), random.randint(75,99))\n",
+        "stud2 = Person (\"Mei\", random.randint(75,99), random.randint(75,99), random.randint(75,99))\n",
+        "stud3 = Person (\"Maria\", random.randint(75,99), random.randint(75,99), random.randint(75,99))\n",
+        "\n",
+        "stud2.Grade()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "jrm15uf_h4Xi",
+        "outputId": "3ba27c25-1efe-477f-e6d5-ccc8874d0259"
+      },
+      "execution_count": 3,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Mei has an average grade of 28.5 in prelims\n",
+            "Mei has an average grade of 22.5 in midterms\n",
+            "Mei has an average grade of 38.0 in finals\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
